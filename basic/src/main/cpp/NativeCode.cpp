@@ -3,6 +3,6 @@
 
 extern "C" {
     JNIEXPORT void JNICALL Java_kzcse_jni_NativeCode_hello(JNIEnv *env, jclass clazz) {
-        std::cout << "Hello from C++!" << std::endl;
+        std::cout << "Hello from C++, How are you" << std::endl;
     }
 }
