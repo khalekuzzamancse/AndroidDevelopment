@@ -1,7 +1,8 @@
 
 include(
     listOf(
-        ":auto-binding",
-        ":manual-binding"
+        ":_01-auto-binding",
+        ":_02-manual-binding",
+        ":_03-with-cmake",
     )
 )

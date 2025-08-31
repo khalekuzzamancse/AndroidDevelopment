@@ -5,7 +5,7 @@
 - main.cpp : this entry point, though main function concept is not exit here
 - **adapter.cpp: contain method that convert data from C++ to JNI or vice versa
 ### Run:
-- Add VM options : `-Djava.library.path=ManulBinding/src/main/cpp`
+- Add VM options : `-Djava.library.path=_02-manual-binding/src/main/cpp/build`
 
 - Build Project
 - Generate the header for single file
@@ -26,3 +26,7 @@
     -I"$JAVA_HOME/include" -I"$JAVA_HOME/include/darwin" \
     src/main/cpp/main.cpp`
   
+# RunConfiguration Intellij IDEA or Android Studio
+- class path(cp) : `JNI._02-manual-binding.main`
+- VM option: `-Djava.library.path=_02-manual-binding/src/main/cpp/build`
+- Main Class: `kzcse.jni.Main`
