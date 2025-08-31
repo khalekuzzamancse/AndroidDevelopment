@@ -1,6 +1,5 @@
 ### Run:
-
-- Add VM options : `-Djava.library.path=src/main/cpp`
+- Add VM options : `-Djava.library.path=ManulBinding/src/main/cpp`
 
 - Build Project
 - Generate the header for single file
