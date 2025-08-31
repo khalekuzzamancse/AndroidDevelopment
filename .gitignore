@@ -124,3 +124,41 @@ Thumbs.db
 **/build/
 **/target/
 **/.cache/
+
+
+
+
+
+
+# Ignore all build directories anywhere in the project
+**/build/
+
+# Ignore CMake generated files
+**/CMakeCache.txt
+**/CMakeFiles/
+**/Makefile
+**/*.cmake
+**/*.cbp
+**/*.sln
+**/*.vcxproj*
+**/*.xcodeproj
+**/*.user
+**/*.ninja
+
+# Ignore compiled libraries and object files
+**/*.o
+**/*.obj
+**/*.so
+**/*.dll
+**/*.dylib
+**/*.a
+**/*.exe
+
+# macOS system files
+.DS_Store
+
+# Optional: Ignore other editor temporary files
+*~
+*.swp
+*.tmp
+
