@@ -11,7 +11,7 @@ O Changed the source code
   - `cmake --build .`
 
 # RunConfiguration Intellij IDEA or Android Studio
-- class path(cp) : `JNI._02-manual-binding.main`
+- class path(cp) : `JNI._03-with-cmake.main`
 - VM option: `-Djava.library.path=_03-with-cmake/src/main/cpp/build`
 - Main Class: `kzcse.jni.Main`
 
