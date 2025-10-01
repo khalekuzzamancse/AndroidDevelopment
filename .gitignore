@@ -26,80 +26,68 @@ ehthumbs.db
 **/.vite/
 
 # ========================
-# Java/Kotlin/Android
+# iOS / Xcode
 # ========================
-**/.gradle/
+# Build products
+**/DerivedData/
 **/build/
-**/bin/
-**/out/
-**/*.iml
-**/.classpath
-**/.project
-**/.settings/
-**/.idea/
-**/local.properties
-**/.externalNativeBuild/
-**/captures/
-**/.cxx/
-.gradle/
-**/*.apk
-**/*.ap_   # Android build intermediate package
-**/generated/
+**/*.xcworkspace
+**/*.xcuserstate
+**/xcuserdata/
+**/*.xcodeproj/*
+**/*.xcscmblueprint
+**/*.moved-aside
+**/*.hmap
+**/*.ipa
+**/*.dSYM
+**/*.xcarchive
 
-# Android Studio test results
-**/test-results/
-**/test-output/
-**/outputs/
+# Swift Package Manager
+**/.build/
+**/Package.resolved
 
-# Keystore files (DO NOT TRACK IN VCS!)
-**/*.jks
-**/*.keystore
+# CocoaPods
+**/Pods/
 
-# Signing config
-**/key.properties
+# Carthage
+**/Carthage/Build/
+
+# Fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots/**/*.png
+**/fastlane/test_output/
+
+# Xcode Server
+**/.xcschememanagement.plist
+
+# User settings and temp files
+*.swp
+*.lock
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# OS-specific
+.DS_Store
+Icon?
+Desktop.ini
+Thumbs.db
 
 # ========================
-# Dart / Flutter
+# Flutter / Dart (optional)
 # ========================
-.dart_tool/
-.packages
-.flutter-plugins
-.flutter-plugins-dependencies
-.pub-cache/
-build/
-coverage/
 **/.dart_tool/
 **/.packages
 **/.flutter-plugins
 **/.flutter-plugins-dependencies
 **/.pub-cache/
 **/coverage/
-
-# Flutter/Dart IDEs
-**/.vscode/
-**/.idea/
-**/android/.gradle/
-**/ios/Pods/
 **/ios/.symlinks/
 **/ios/Flutter/Flutter.framework/
 **/ios/Flutter/App.framework/
 **/ios/.generated/
-
-# ========================
-# IntelliJ / JetBrains IDE
-# ========================
-**/.idea/
-**/*.iws
-**/*.ipr
-**/*.iml
-
-# ========================
-# OS-Specific
-# ========================
-.DS_Store
-Icon?
-Desktop.ini
-Thumbs.db
 
 # ========================
 # Others
@@ -113,52 +101,5 @@ Thumbs.db
 *.gz
 *.7z
 *.rar
-*.bak
-*.tmp
-*.log
-*.orig
-*.rej
-
-# Exclude generated test reports, caches, etc.
 **/test-results/
-**/build/
-**/target/
 **/.cache/
-
-
-
-
-
-
-# Ignore all build directories anywhere in the project
-**/build/
-
-# Ignore CMake generated files
-**/CMakeCache.txt
-**/CMakeFiles/
-**/Makefile
-**/*.cmake
-**/*.cbp
-**/*.sln
-**/*.vcxproj*
-**/*.xcodeproj
-**/*.user
-**/*.ninja
-
-# Ignore compiled libraries and object files
-**/*.o
-**/*.obj
-**/*.so
-**/*.dll
-**/*.dylib
-**/*.a
-**/*.exe
-
-# macOS system files
-.DS_Store
-
-# Optional: Ignore other editor temporary files
-*~
-*.swp
-*.tmp
-
