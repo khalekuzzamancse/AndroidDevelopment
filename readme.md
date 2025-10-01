@@ -1,0 +1,26 @@
+### Topics:
+- ✅ JNI
+- ✅ NDK
+- ✅ UITest
+- ComposeUI
+- Compose Navigation
+- Compose Animation
+- Custom Desgin System
+- Custom Shader
+- OpenGL and Graphics APIs
+- Progurd, R8 and Secure Key
+- Networking
+- Bluetooth
+- Wi-Fi and Wi-Fi direct
+- ML Intergration
+- Android Services
+- Broadcast Receiver
+- Content Provider
+- Notification
+- File and Media Picker
+- Google Map
+- Work Manager
+- Gradle
+- Room and SQLite
+- Firebase
+- Unit Test
