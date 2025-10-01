@@ -5,6 +5,7 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import com.uitest.calculator.SimpleCalculatorScreen
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
@@ -18,9 +19,15 @@ class SimpleCalculatorTest {
         Thread.sleep(500)//to show the keypress
     }
 
+    @Before
+
+    fun  init(){
+        rule.setContent { SimpleCalculatorScreen() }
+        rule.waitForIdle()
+    }
+
     @Test
     fun input_and_clear() {
-        rule.setContent { SimpleCalculatorScreen() }
         pressKey("1")
         pressKey("2")
         pressKey("3")
@@ -33,7 +40,6 @@ class SimpleCalculatorTest {
 
     @Test
     fun simple_addition() {
-        rule.setContent { SimpleCalculatorScreen() }
         pressKey("1")
         pressKey("0")
         pressKey("+")
@@ -44,7 +50,6 @@ class SimpleCalculatorTest {
 
     @Test
     fun simple_subtraction() {
-        rule.setContent { SimpleCalculatorScreen() }
         pressKey("5")
         pressKey("0")
         pressKey("-")
@@ -56,7 +61,6 @@ class SimpleCalculatorTest {
 
     @Test
     fun simple_multiplication() {
-        rule.setContent { SimpleCalculatorScreen() }
         pressKey("6")
         pressKey("×")
         pressKey("7")
@@ -66,7 +70,6 @@ class SimpleCalculatorTest {
 
     @Test
     fun simple_division() {
-        rule.setContent { SimpleCalculatorScreen() }
         pressKey("8")
         pressKey("4")
         pressKey("÷")
@@ -77,7 +80,6 @@ class SimpleCalculatorTest {
 
     @Test
     fun division_by_zero() {
-        rule.setContent { SimpleCalculatorScreen() }
         pressKey("7")
         pressKey("÷")
         pressKey("0")
@@ -87,7 +89,7 @@ class SimpleCalculatorTest {
 
     @Test
     fun invalid_operator_sequence_prevention() {
-        rule.setContent { SimpleCalculatorScreen() }
+
         pressKey("+")
         rule.onNodeWithText("0").assertExists()  // Operator at start ignored
 
