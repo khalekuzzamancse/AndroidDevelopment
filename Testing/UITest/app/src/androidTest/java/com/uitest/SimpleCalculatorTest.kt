@@ -4,7 +4,7 @@ import androidx.compose.ui.test.junit4.createComposeRule
 
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import com.uitest.calculator.SimpleCalculatorScreen
+import com.uitest.feature.home.SimpleCalculatorScreen
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

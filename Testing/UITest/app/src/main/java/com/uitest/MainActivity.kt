@@ -4,7 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.uitest.calculator.SimpleCalculatorScreen
+import com.uitest.feature._navigation.NavigationRoot
+import com.uitest.feature.home.SimpleCalculatorScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +13,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             UITestSamplesTheme {
-                SimpleCalculatorScreen { }
+               // SimpleCalculatorScreen { }
+                NavigationRoot()
 
             }
         }

@@ -1,4 +1,4 @@
-package com.uitest.calculator
+package com.uitest.feature.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "UITestSamples"
+rootProject.name = "UITest"
 include(":app")
