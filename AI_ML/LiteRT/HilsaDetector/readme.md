@@ -16,3 +16,5 @@
 
 * If your model has a different shape, you will need to modify the code slightly to make it work.
 
+## Used
+- `com.google.ai.edge.litert`

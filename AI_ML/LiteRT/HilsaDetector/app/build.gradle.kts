@@ -52,6 +52,6 @@ android {
 dependencies {
     implementation(libs.bundles.compose)
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.bundles.tflite)
+    implementation(libs.bundles.litert)
     implementation(libs.bundles.navigation3)
 }
