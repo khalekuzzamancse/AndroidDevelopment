@@ -4,6 +4,7 @@ package com.uitest.coretest
 import androidx.activity.ComponentActivity
 import androidx.compose.ui.test.hasClickAction
 import androidx.compose.ui.test.hasContentDescription
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.compose.ui.test.junit4.ComposeContentTestRule
 import androidx.compose.ui.test.performClick
@@ -33,9 +34,24 @@ fun ComposeContentTestRule.navigateTo(navItem: String, screen: String, sleep:Lon
     Sleeper.sleep(sleep)
 }
 
+/**
+ * - If the has the label or text and it is clickable then it click and wait for the idle
+ * - After that sleep for 500ms so that action become visible to the user
+ */
+ fun ComposeContentTestRule.clickIfHasLabel(label: String){
+    onNode(hasText(label) and hasClickAction()).performClick()
+     waitForIdle()
+    Thread.sleep(500)//to show the keypress
+}
+
 object  Sleeper{
     fun sleep(ms:Long){
         Thread.sleep(ms)
+    }
+    fun  sleepInfinity(){
+        while (true){
+            Thread.sleep(1000)
+        }
     }
 
     fun sleep1sec(){

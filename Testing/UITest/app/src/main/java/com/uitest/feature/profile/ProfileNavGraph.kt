@@ -5,7 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
-import paymentsave.terminalapp.core.ui.VoidComposable
+import com.uitest.core.ui.VoidComposable
 import com.uitest.feature._core.ui.ScreenStrategy
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

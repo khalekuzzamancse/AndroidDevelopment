@@ -19,7 +19,7 @@ class BottomBarNavigationTest {
     fun init() {
         rule.setContent { NavigationRoot() }
         rule.waitForIdle()
-        Thread.sleep(3_000)
+        Sleeper.sleep3sec()
     }
 
 

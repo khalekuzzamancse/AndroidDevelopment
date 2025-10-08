@@ -33,8 +33,8 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.uitest.R
-import paymentsave.terminalapp.core.ui.SpacerVertical
-import paymentsave.terminalapp.core.ui.TextView
+import com.uitest.core.ui.SpacerVertical
+import com.uitest.core.ui.TextView
 
 enum class BottomBarItem{
     Home, History, Report, Profile

@@ -1,4 +1,4 @@
-package paymentsave.terminalapp.core.ui
+package com.uitest.core.ui
 
 import androidx.compose.ui.tooling.preview.Preview
 

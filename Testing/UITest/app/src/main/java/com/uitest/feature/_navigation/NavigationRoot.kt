@@ -22,10 +22,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.serialization.Serializable
-import paymentsave.terminalapp.core.ui.VoidComposable
+import com.uitest.core.ui.VoidComposable
 import com.uitest.feature._core.ui.BottomBar
 import com.uitest.feature._core.ui.BottomBarItem
-import com.uitest.feature.history.HistoryNavGraph
+import com.uitest.feature.history.HistoryScreen
 import com.uitest.feature.home.HomeNavGraph
 import com.uitest.feature.misc.SplashScreen
 import com.uitest.feature.profile.ProfileNavGraph
@@ -162,7 +162,7 @@ fun NavigationRoot(
 
                 is Route.History -> {
                     NavEntry(key) {
-                        HistoryNavGraph(
+                        HistoryScreen(
                             modifier = Modifier,
                             bottomBar = bottomBar
                         )

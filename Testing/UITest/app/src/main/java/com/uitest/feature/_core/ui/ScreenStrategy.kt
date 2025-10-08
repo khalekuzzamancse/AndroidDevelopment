@@ -1,6 +1,5 @@
 package com.uitest.feature._core.ui
 
-import android.R.attr.navigationIcon
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -16,7 +15,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import paymentsave.terminalapp.core.ui.VoidComposable
+import com.uitest.core.ui.VoidComposable
 import com.uitest.feature._core.logic.LoadingAndFeedbackController
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import paymentsave.terminalapp.core.language.Logger
-import paymentsave.terminalapp.core.ui.DevicePreviewsGroup
+import com.uitest.core.ui.DevicePreviewsGroup
 import kotlin.math.min
 
 @Composable
