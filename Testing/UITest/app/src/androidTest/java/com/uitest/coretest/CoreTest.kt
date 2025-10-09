@@ -24,6 +24,16 @@ fun ComposeContentTestRule.waitFoScreen(screen: String){
         }
     }
 }
+fun ComposeContentTestRule.waitForLabelOnTextView(label: String,substring:Boolean=false){
+    this.waitUntil(timeoutMillis = 5_000) {
+        try {
+            this.onNode(hasText(label, substring = substring)).assertExists()
+            true // Node exists → stop waiting
+        } catch (e: AssertionError) {
+            false // Node not found yet → keep waiting
+        }
+    }
+}
 /**
  * @param navItem is content description of the nav item or drawer item
  * @param screen semantic for the screen, expect the semantic belongs to the screen modifier or screen

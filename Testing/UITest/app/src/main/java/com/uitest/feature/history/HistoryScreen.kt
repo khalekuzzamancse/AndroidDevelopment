@@ -46,6 +46,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.uitest.core.ui.ButtonView
 import com.uitest.core.ui.DividerHorizontal
 import com.uitest.core.ui.SpacerFillAvailable
 import com.uitest.core.ui.SpacerHorizontal
@@ -65,7 +66,7 @@ fun HistoryScreen(
     modifier: Modifier = Modifier,
     bottomBar: VoidComposable,
 ) {
-    val viewModel = remember { HistoryScreenViewModel() }
+    val viewModel = remember { HistoryViewModel() }
     _HistoryScreen(
         modifier = modifier,
         bottomBar = bottomBar,
@@ -88,9 +89,23 @@ fun _HistoryScreen(
         bottomBar = bottomBar,
         fab = {},
     ) { modifier ->
+
+        val filtered=viewModel.filterController.selectedByGroup.collectAsState().value
         Column(
             modifier = modifier.align(Alignment.Center)
         ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                ButtonView(
+                    label = "Apply"
+                ) {
+
+                }
+                SpacerHorizontal(8)
+                Text("Applied:${filtered}")
+            }
+
             FilterView(
                 modifier = Modifier,
                 controller = viewModel.filterController,
@@ -159,11 +174,13 @@ fun FilterView(
                         val containerColor = if (selected) ColorFactory.colors.primaryLight else
                             ColorFactory.colors.background
                         Surface(
-                            modifier = Modifier.clickable {
-                                controller.selectGroup(group.groupName, option)
-                            }.semantics{
-                                contentDescription=group.groupName
-                            },
+                            modifier = Modifier
+                                .clickable {
+                                    controller.selectGroup(group.groupName, option)
+                                }
+                                .semantics {
+                                    contentDescription = group.groupName
+                                },
                             shape = RoundedCornerShape(16.dp),
                             shadowElevation = 4.dp,
                             color = containerColor
